@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header"> 
+        <div class="task-header">
+            Task list
+        </div>
+        <button id="createTask" class="create-task">
+            Create task
+        </button>
+    </header>
+    <main>
+        <div id="taskList" class="task-list">
+            <div id="errorText" class="error-text">
+                No tasks found
+            </div>
+        </div>
+        <div id="mask" class="mask"> </div>
+        <div id="createTaskForm" class="task-form">
+            <h3 class="form-heading"> Create task </h3>
+            <form>
+                <div class="form-item">
+                    <label class="form-label">Title</label>
+                    <input name="title" class="form-input" type="text" placeholder="Enter task title">
+                </div>
+
+                <div class="form-item">
+                    <label class="form-label">Description</label>
+                    <input name="description"  type="text" class="form-input"  placeholder="Enter task description" >
+                </div>
+
+                <div class="form-item">
+                    <label class="form-label">Status</label>
+                    <select name="status" class="form-input">
+                        <option selected value=""> Select status</option>
+                        <option value="todo">Todo</option>
+                        <option value="in-progress">In-Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+
+                <div class="form-item">
+                    <label class="form-label"> Upload PDF</label>
+                    <input name="pdfFile" accept="application/pdf" type="file" class="form-input"  >
+                </div>
+
+                <div class="form-item">
+                    <label class="form-label"> Upload Excel</label>
+                    <input name="excelFile" accept="application/vnd.ms-excel" type="file" class="form-input"  >
+                </div>
+                <div class="button-group">
+                    <button type="submit" id="save-button"> Save </button>
+                    <button type="button" id="reset-button"> Reset </button>
+                </div>
+                
+
+            </form>
+        </div>
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+</html>
